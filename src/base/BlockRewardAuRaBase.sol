@@ -112,14 +112,6 @@ contract BlockRewardAuRaBase is UpgradeableOwned {
     /// @param bridge The bridge address which called the `addExtraReceiver` function.
     event AddedReceiver(uint256 amount, address indexed receiver, address indexed bridge);
 
-    /// @dev Emitted by the `addBridgeNativeRewardReceivers` function.
-    /// @param amount The fee/reward amount in native coins passed to the
-    /// `addBridgeNativeRewardReceivers` function as a parameter.
-    /// @param cumulativeAmount The value of `bridgeNativeReward` state variable
-    /// after adding the `amount` to it.
-    /// @param bridge The bridge address which called the `addBridgeNativeRewardReceivers` function.
-    event BridgeNativeRewardAdded(uint256 amount, uint256 cumulativeAmount, address indexed bridge);
-
     /// @dev Emitted by the `_mintNativeCoins` function which is called by the `reward` function.
     /// This event is only used by the unit tests because the `reward` function cannot emit events.
     /// @param receivers The array of receiver addresses for which native coins are minted. The length of this

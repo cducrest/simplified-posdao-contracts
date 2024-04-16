@@ -2,6 +2,11 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+remappings = [
+    'forge-std/=lib/forge-std/src/',
+]
+eth-rpc-url = "https://gnosis-rpc.publicnode.com"
+fork_block_number = 33473000
 
 solc_version = "0.8.22"
 
